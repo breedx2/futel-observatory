@@ -1,0 +1,23 @@
+{
+  "name": "futel-observatory",
+  "version": "1.0.0",
+  "description": "Realtime status of the futel network.",
+  "main": "src/app.js",
+  "scripts": {
+    "app": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breedx2/futel-observatory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breedx2/futel-observatory/issues"
+  },
+  "homepage": "https://github.com/breedx2/futel-observatory#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
