@@ -2,6 +2,8 @@
 
 class WebsocketClient {
 
+  //TODO: Needs reconnection logic...
+
   start(){
     const url = `${location.protocol.replace(/http/, 'ws')}//${location.host}/events`;
     this.socket = new WebSocket(url);
@@ -16,12 +18,15 @@ class WebsocketClient {
     console.log('websocket connected');
   }
 
-  onMessage(event){
-    if(event.data.startsWith('{')){
-      return "something else";
+  onMessage(message){
+    console.log(message);
+    if(message.data.startsWith('{')){
+      const event = JSON.parse(message.data);
+      // return "something else";
+
       // return handleControlEvent(JSON.parse(event.data), this.eventActions, this.clientId);
     }
-    console.log(`recv: `, event.data);
+    console.log(`recv: `, message.data);
   }
 
   onClose(event){
