@@ -1,0 +1,24 @@
+html {
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  background-color: #d6d6d6;
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+div.caller-container {
+  display: inline-block;
+}
+
+.valign-wrapper {
+  /* display: inline-block; */
+  /* min-height: 600px; */
+  /* border: solid blue 1px; */
+}

@@ -1,1 +1,2 @@
-import Form from "./components/ObservatoryApp";
+
+import ObservatoryApp from "./components/ObservatoryApp";
