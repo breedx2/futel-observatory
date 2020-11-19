@@ -15,7 +15,7 @@ class ServerWebsocket {
     	});
   	ws.on('close', e => {
   		  console.log(`client closed websocket: ${e}`);
-        self._remove(this);
+        self._remove(ws);
       });
   }
 

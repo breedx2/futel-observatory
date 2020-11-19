@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 
 class Caller extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {

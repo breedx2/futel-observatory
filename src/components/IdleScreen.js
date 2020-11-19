@@ -1,24 +1,24 @@
 import React, { Component } from "react";
-import Caller from './Caller';
 
-class CallersRow extends Component {
+import IdleHandy from './IdleHandy';
+
+class IdleScreen extends Component {
 
   constructor(props){
     super(props);
   }
 
-  render() {
+  render(){
     return (
       <div className="full-height valign-wrapper center-align">
         <div className="valign-wrapper center-align allCallers ">
-          <Caller/>
-          <Caller/>
-          <Caller/>
-          <Caller/>
+          <IdleHandy/>
+          <audio autoplay="true" loop="true" src="audio/ipamidi.mp3"/>
         </div>
       </div>
-    )
+    );
   }
+
 }
 
-export default CallersRow;
+export default IdleScreen;

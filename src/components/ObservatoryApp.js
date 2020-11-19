@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import CallersRow from './CallersRow';
+import IdleScreen from './IdleScreen';
 
 class ObservatoryApp extends Component {
 
@@ -14,8 +15,7 @@ class ObservatoryApp extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event, stateTracker) {
-    // const { value } = event.target;
+  handleChange(msg, stateTracker) {
     this.setState(() => {
       return {
         idle: stateTracker.isIdle()
@@ -25,11 +25,9 @@ class ObservatoryApp extends Component {
 
   render() {
     if(this.state.idle){
-      return (<div>boring</div>);
+      return (<IdleScreen/>);
     }
-    return (
-        <CallersRow/>
-    );
+    return (<CallersRow/>);
   }
 }
 
