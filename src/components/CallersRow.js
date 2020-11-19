@@ -16,6 +16,6 @@ class CallersRow extends Component {
       </div>
     )
   }
-
 }
+
 export default CallersRow;
