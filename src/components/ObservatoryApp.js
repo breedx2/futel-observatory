@@ -3,37 +3,32 @@ import ReactDOM from "react-dom";
 import CallersRow from './CallersRow';
 
 class ObservatoryApp extends Component {
-  constructor() {
-    super();
+
+  constructor(props) {
+    super(props);
 
     this.state = {
-      value: ""
+      idle: true
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    const { value } = event.target;
+  handleChange(event, stateTracker) {
+    // const { value } = event.target;
     this.setState(() => {
       return {
-        value
+        idle: stateTracker.isIdle()
       };
     });
   }
 
   render() {
+    if(this.state.idle){
+      return (<div>boring</div>);
+    }
     return (
-      <CallersRow>
-      {/*<form>
-        <input
-          type="text"
-          value="hello react"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </form>*/}
-      </CallersRow>
+        <CallersRow/>
     );
   }
 }

@@ -4,6 +4,10 @@ class WebsocketClient {
 
   //TODO: Needs reconnection logic...
 
+  constructor(handler){
+    this.handler = handler;
+  }
+
   start(){
     const url = `${location.protocol.replace(/http/, 'ws')}//${location.host}/events`;
     this.socket = new WebSocket(url);
@@ -19,12 +23,9 @@ class WebsocketClient {
   }
 
   onMessage(message){
-    console.log(message);
     if(message.data.startsWith('{')){
       const event = JSON.parse(message.data);
-      // return "something else";
-
-      // return handleControlEvent(JSON.parse(event.data), this.eventActions, this.clientId);
+      return this.handler(event);
     }
     console.log(`recv: `, message.data);
   }
