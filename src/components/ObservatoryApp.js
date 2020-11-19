@@ -39,6 +39,3 @@ class ObservatoryApp extends Component {
 }
 
 export default ObservatoryApp;
-
-const wrapper = document.getElementById("container");
-wrapper ? ReactDOM.render(<ObservatoryApp />, wrapper) : false;
