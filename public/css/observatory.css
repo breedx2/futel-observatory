@@ -13,12 +13,24 @@ body {
   height: 100%;
 }
 
-div.caller-container {
+div.caller {
   display: inline-block;
+  text-align: center;
+  min-width: 120px;
+  width: 20%;
+  margin: 10px;
+  min-height: 300px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #a1887f;
+  color: white;
+  border: solid #555555 1px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
 
-.valign-wrapper {
-  /* display: inline-block; */
-  /* min-height: 600px; */
-  /* border: solid blue 1px; */
+.allCallers {
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
 }
