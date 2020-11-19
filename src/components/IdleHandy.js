@@ -22,7 +22,6 @@ class IdleHandy extends Component {
   }
 
   rotate(){
-     console.log('handy tick');
      const rang = Math.floor(Math.random() * Math.floor(1000));
      var delta = rang / 100.0;
      if(this.angle >= 0){
