@@ -25,7 +25,14 @@ class CallerStateTracker {
     return Object.keys(this.callers).length == 0;
   }
 
+  getCallers(){
+    //TODO: Don't leak this, make a copy!
+    return Object.values(this.callers);
+  }
+
   _updateExisting(msg, caller){
+    caller.lastMsgRaw = msg;
+    caller.lastEvent = msg.event.UserEvent;
     // console.log(`FAKE Updating existing caller: ${caller.uid}`);
     //TODO: Actually update something interesting...
     //TODO: Remove caller on the various HANGUP types

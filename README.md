@@ -7,5 +7,5 @@ For local development:
 
 ```
 npm install
-npm run dev
+npm run build && npm run app
 ```

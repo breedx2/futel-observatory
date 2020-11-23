@@ -9,8 +9,8 @@ class Caller extends Component {
   render() {
     return (
       <div className="caller">
-      <h3>caller</h3>
-      they are doing something
+      <h4>{this.props.name}</h4>
+      {this.props.event}
       </div>
     )
   }

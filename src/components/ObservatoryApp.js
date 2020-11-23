@@ -9,7 +9,8 @@ class ObservatoryApp extends Component {
     super(props);
 
     this.state = {
-      idle: true
+      idle: true,
+      callers: {}
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,7 +19,8 @@ class ObservatoryApp extends Component {
   handleChange(msg, stateTracker) {
     this.setState(() => {
       return {
-        idle: stateTracker.isIdle()
+        idle: stateTracker.isIdle(),
+        callers: stateTracker.getCallers()
       };
     });
   }
@@ -27,7 +29,7 @@ class ObservatoryApp extends Component {
     if(this.state.idle){
       return (<IdleScreen/>);
     }
-    return (<CallersRow/>);
+    return (<CallersRow callers={this.state.callers}/>);
   }
 }
 
